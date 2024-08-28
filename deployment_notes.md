@@ -60,8 +60,9 @@ Tag the docker image:
 
 - In the AWS Console go to [ECS Task Definitions](https://console.aws.amazon.com/ecs/v2/task-definitions) and click 'Create a new task definition'.
 - Under 'Launch Type' check 'AWS Fargate'.
+- Under 'Operating system/Architecture' select 'Linux/ARM64'
 - Set desired CPU and Memory.
-- Under 'Container', enter a container name and your ECR repository URI.
+- Under 'Container', enter a container name and your ECR repository URI. Then click 'Docker configuration' and under 'Command' enter `bundle,exec,rails,server`.
 - Click 'Create'
 
 <a id='create-a-cluster'></a>
